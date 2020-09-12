@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Вход</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body class="text-center">
+<header th:insert="blocks/header :: header"></header>
+<div class="col-md-8 order-md-1">
+<form class="form-signin">
+    <h1 class="h3 mb-3 font-weight-normal">Войдите в свою учётную запись</h1>
+    <div class="mb-3">
+        <label for="Login">Логин</label>
+        <input type="text" class="form-control" id="Login" placeholder="" value="" required="">
+        <div class="invalid-feedback">
+            Введите логин.
+        </div>
+    </div>
+
+        <div class="mb-3">
+            <label for="Password">Пароль</label>
+            <input type="password" class="form-control" id="Password" placeholder="" value="" required="">
+            <div class="invalid-feedback">
+                Введите пароль.
+            </div>
+        </div>
+
+    <button class="btn btn-primary btn-lg btn-block" type="submit">Войти</button>
+
+</form>
+
+</div>
+</body>
+</html>

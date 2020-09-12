@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Вход</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body class="text-center">
+<header th:insert="blocks/header :: header"></header>
+<div class="col-md-8 order-md-1">
+    <h4 class="mb-3">Регистрация</h4>
+    <form class="needs-validation" novalidate="">
+        <div class="row">
+        <div class="col-md-6 mb-3">
+            <label for="firstName">Имя</label>
+            <input type="text" class="form-control" id="firstName" placeholder="" value="" required="">
+            <div class="invalid-feedback">
+                Введите имя.
+            </div>
+        </div>
+        <div class="col-md-6 mb-3">
+            <label for="lastName">Фамилия</label>
+            <input type="text" class="form-control" id="lastName" placeholder="" value="" required="">
+            <div class="invalid-feedback">
+                Введите фамилию.
+            </div>
+        </div>
+    </div>
+        <hr class="mb-4">
+            <div class="mb-3">
+                <label for="Login">Логин</label>
+                <input type="text" class="form-control" id="Login" placeholder="" value="" required="">
+                <div class="invalid-feedback">
+                    Введите логин.
+                </div>
+                </div>
+
+            <div class="row">
+            <div class="col-md-6 mb-3">
+                <label for="Password">Пароль</label>
+                <input type="text" class="form-control" id="Password" placeholder="" value="" required="">
+                <div class="invalid-feedback">
+                    Введите пароль.
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="PasswordAgain">Подтвердите пароль</label>
+                <input type="text" class="form-control" id="PasswordAgain" placeholder="" value="" required="">
+                <div class="invalid-feedback">
+                    Введите еще раз.
+                </div>
+            </div>
+        </div>
+        <button class="btn btn-primary btn-lg btn-block" type="submit">Зарегистрироваться</button>
+    </form>
+</div>
+
+
+</body>
+</html>

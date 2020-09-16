@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class WebBankApplication {
-
+	public static Long id;
 	public static void main(String[] args) {
 		SpringApplication.run(WebBankApplication.class, args);
 	}

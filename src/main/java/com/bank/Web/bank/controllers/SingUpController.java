@@ -1,6 +1,10 @@
 package com.bank.Web.bank.controllers;
 
+//import com.bank.Web.bank.config.Money;
+import com.bank.Web.bank.models.Money;
 import com.bank.Web.bank.models.User;
+//import com.bank.Web.bank.repo.MoneyRepository;
+import com.bank.Web.bank.repo.MoneyRepository;
 import com.bank.Web.bank.repo.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -13,6 +17,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class SingUpController {
     @Autowired
     private UserRepository userRepository;
+    @Autowired
+    private MoneyRepository moneyRepository;
     @GetMapping("/singup")
     public String singup(Model model) {
         return "singup";
@@ -21,6 +27,8 @@ public class SingUpController {
     public String userAdd(@RequestParam String firstName,@RequestParam String lastName,@RequestParam String Login,@RequestParam String Password, Model model) {
             User user = new User(firstName, lastName, Login, Password);
             userRepository.save(user);
+            Money money = new Money("0",user.getId());
+            moneyRepository.save(money);
             return "redirect:/singin";
     }
 }

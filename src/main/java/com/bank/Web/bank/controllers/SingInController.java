@@ -1,6 +1,5 @@
 package com.bank.Web.bank.controllers;
 
-import com.bank.Web.bank.models.User;
 import com.bank.Web.bank.repo.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

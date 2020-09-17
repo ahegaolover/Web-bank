@@ -29,7 +29,7 @@ public class SingUpController {
             User user = new User(firstName, lastName, Login, Password);
             userRepository.save(user);
             WebBankApplication.id=user.getId();
-            Money money = new Money("0",user.getId());
+            Money money = new Money(0,user.getId());
             moneyRepository.save(money);
             return "redirect:/id";
     }

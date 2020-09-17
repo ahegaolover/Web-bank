@@ -11,10 +11,16 @@ public class Money {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    private String money;
+    private Integer money;
     private Long user_id;
 
-    public Money(String money, Long user_id) {
+    public Money(Long id, Integer money, Long user_id) {
+        this.id = id;
+        this.money = money;
+        this.user_id = user_id;
+    }
+
+    public Money(Integer money, Long user_id) {
         this.money = money;
         this.user_id = user_id;
     }
@@ -30,11 +36,11 @@ public class Money {
         this.id = id;
     }
 
-    public String getMoney() {
+    public Integer getMoney() {
         return money;
     }
 
-    public void setMoney(String money) {
+    public void setMoney(Integer money) {
         this.money = money;
     }
 

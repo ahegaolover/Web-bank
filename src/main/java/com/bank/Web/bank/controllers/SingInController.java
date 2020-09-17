@@ -30,6 +30,7 @@ public class SingInController {
         User user= userRepository.findById(ID).get();
         if(user.getLogin().equals(Login)&&user.getPassword().equals(Password)) {
             Money money= moneyRepository.findById(ID+1).get();
+            WebBankApplication.id=user.getId();
             WebBankApplication.money=money.getMoney();
             WebBankApplication.name=user.getFirst_name();
             return "redirect:/main";

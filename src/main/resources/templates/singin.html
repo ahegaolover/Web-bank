@@ -8,8 +8,10 @@
 <body class="text-center">
 <header th:insert="blocks/header :: header"></header>
 <div class="col-md-8 order-md-1">
-    <form action="/singup" method="post">
+    <form action="/singin" method="post">
         <h1 class="h3 mb-3 font-weight-normal">Войдите в свою учётную запись</h1>
+        <label>Id</label>
+        <input type="text" class="form-control" name="ID" placeholder="Введите id" required="">
         <label>Логин</label>
         <input type="text" class="form-control" name="Login" placeholder="Введите логин" required="">
         <label>Пароль</label>

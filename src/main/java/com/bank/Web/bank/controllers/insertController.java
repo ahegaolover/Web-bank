@@ -1,23 +1,20 @@
 package com.bank.Web.bank.controllers;
 
 import com.bank.Web.bank.WebBankApplication;
-import com.bank.Web.bank.models.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-
 
 @Controller
-public class IdController {
-    @GetMapping("/id")
+public class insertController {
+    @GetMapping("/insert")
     public String home(Model model) {
-        if(WebBankApplication.id==null)
+        if(WebBankApplication.name==null||WebBankApplication.money==null)
             return "redirect:/";
         else {
-            model.addAttribute("id", WebBankApplication.id);
-            return "id";
+            model.addAttribute("amount", WebBankApplication.money);
+            return "insert";
         }
     }
 }

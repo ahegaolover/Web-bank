@@ -1,10 +1,8 @@
 package com.bank.Web.bank.controllers;
 
-//import com.bank.Web.bank.config.Money;
 import com.bank.Web.bank.WebBankApplication;
 import com.bank.Web.bank.models.Money;
 import com.bank.Web.bank.models.User;
-//import com.bank.Web.bank.repo.MoneyRepository;
 import com.bank.Web.bank.repo.MoneyRepository;
 import com.bank.Web.bank.repo.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
